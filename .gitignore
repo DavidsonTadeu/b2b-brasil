@@ -1,0 +1,6 @@
+node_modules
+.env
+dist
+.vscode
+backend/b2b.sqlite
+backend/b2b.sqlite-journal

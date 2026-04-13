@@ -1,0 +1,59 @@
+{
+  "name": "Quote",
+  "type": "object",
+  "properties": {
+    "buyer_id": {
+      "type": "string"
+    },
+    "buyer_name": {
+      "type": "string"
+    },
+    "buyer_email": {
+      "type": "string"
+    },
+    "supplier_id": {
+      "type": "string"
+    },
+    "supplier_name": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "product_title": {
+      "type": "string"
+    },
+    "requested_quantity": {
+      "type": "number"
+    },
+    "buyer_message": {
+      "type": "string",
+      "description": "Mensagem do comprador"
+    },
+    "supplier_response": {
+      "type": "string",
+      "description": "Resposta do fornecedor"
+    },
+    "quoted_price": {
+      "type": "number",
+      "description": "Pre\u00e7o cotado pelo fornecedor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "responded",
+        "accepted",
+        "rejected",
+        "expired"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "buyer_id",
+    "supplier_id",
+    "product_id",
+    "requested_quantity"
+  ]
+}

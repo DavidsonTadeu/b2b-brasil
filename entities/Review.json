@@ -1,0 +1,31 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "buyer_id": {
+      "type": "string"
+    },
+    "buyer_name": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "comment": {
+      "type": "string"
+    },
+    "supplier_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_id",
+    "buyer_id",
+    "rating"
+  ]
+}

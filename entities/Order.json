@@ -1,0 +1,91 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "buyer_id": {
+      "type": "string"
+    },
+    "buyer_name": {
+      "type": "string"
+    },
+    "buyer_email": {
+      "type": "string"
+    },
+    "supplier_id": {
+      "type": "string"
+    },
+    "supplier_name": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_title": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "variations_selected": {
+            "type": "object"
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "total": {
+      "type": "number"
+    },
+    "platform_fee": {
+      "type": "number",
+      "description": "7% comiss\u00e3o da plataforma"
+    },
+    "supplier_amount": {
+      "type": "number",
+      "description": "Valor l\u00edquido para o fornecedor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "processing",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "refunded"
+      ],
+      "default": "pending"
+    },
+    "shipping_address": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "buyer_id",
+    "supplier_id",
+    "items",
+    "total"
+  ]
+}
