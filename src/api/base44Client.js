@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_BASE44_APP_BASE_URL || 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_BASE44_APP_BASE_URL || '/api';
 
 async function apiFetch(endpoint, options = {}, isFormData = false) {
   const token = localStorage.getItem('base44_access_token') || localStorage.getItem('token');
